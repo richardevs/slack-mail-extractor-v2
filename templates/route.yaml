@@ -1,0 +1,9 @@
+## route.yaml tells the program what the keyword is,
+## and which file to look for the next step.
+## Extension .py is not needed!
+## All files must be saved in templates folder.
+##
+## Format:
+## "Keyword": 
+##   - "pyfilename": 
+##   - "slack_channel": (Optional)
