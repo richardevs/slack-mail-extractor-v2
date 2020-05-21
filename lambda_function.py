@@ -2,7 +2,7 @@
 Public version of slack-mail-extractor.
 https://github.com/richardevs/slack-mail-extractor-v2
 This script is intended for API Gateway + AWS Lambda
-Last edit: 2020-05-18 18:00 JST
+Last edit: 2020-05-21 10:00 JST
 
 Basic function: Invite the Slack app into a channel,
 this code will fetch any "filetype:email" and post full context to channel.
@@ -63,6 +63,8 @@ def lambda_handler(event, context):
                         Process route.yaml from templates
                     '''
                     CUSTOM_STRING = False # Pre-defined swtich
+                    CUSTOM_SLACK_CHANNEL = False # Pre-defined swtich
+
                     try:
                         with open(r'templates/route.yaml') as route:
                             route_yaml = yaml.full_load(route)
@@ -83,7 +85,6 @@ def lambda_handler(event, context):
                                         CUSTOM_SLACK_CHANNEL = True
                                     except IndexError:
                                         print('--- no slack channel found for this template ---')
-                                        CUSTOM_SLACK_CHANNEL = False
                                         pass
                             '''
                                 If no template matches (CUSTOM_STRING False), output original context
