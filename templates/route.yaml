@@ -3,6 +3,8 @@
 ## Extension .py is not needed!
 ## All files must be saved in templates folder.
 ##
+## Keyword will be searched in email content, not email title.
+##
 ## Format:
 ## "Keyword": 
 ##   - "pyfilename": 

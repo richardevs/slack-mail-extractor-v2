@@ -6,7 +6,7 @@ it will filter all message with `filetype:email` and process them with any speci
 ## Process Logic
 
 1) Get email content when they are posted in Slack channel
-2) Check templates/route.yaml for pre-defined action to specific keywords
+2) Check templates/route.yaml for pre-defined action to specific keywords inside email content
 3) If there is no match template, output raw email content back to the same channel
 4) If there is a match, raw email content will be passed to that python file to process
 
