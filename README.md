@@ -1,7 +1,7 @@
 ## What it does
 
-When the Slack app is being invited into a channel, when slack notified a new message,
-it will filter all message with `filetype:email` and process them with any specified template.
+Invite the Slack app into a channel, when slack notified a new message,
+it will fetch all messages with `filetype:email` and process them with any specified template.
 
 ## Process Logic
 
@@ -37,7 +37,8 @@ and if slack_channel is defined, the return result will be sent to `slack_channe
 6) Test your deployment by entering your API Gateway URL to Lambda in Slack Event Subscriptions page
 7) If Slack returns `Verified`, your deployment should be working
 8) Subscribe to these bot events:
-    - message.channels
+    - message.channels  
+    
    And assign these Bot Token Scopes:
     - chat:write
     - chat:write.public
